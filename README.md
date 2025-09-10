@@ -3,6 +3,18 @@
 **Sr. Software Developer in Test (SDET) | Automation Architect | AWS & Cloud-Native Developer**  
 Python • TypeScript • Java • GraphQL • Playwright  
 
+## 🎯 Portfolio & Work Examples
+
+**📁 [View My Complete Portfolio](https://github.com/dholman7/danholman-portfolio)**
+
+This repository showcases my work in **test automation, AWS cloud development, and AI-powered testing**. Each folder contains code samples and writeups demonstrating skills I use daily to improve developer velocity, reduce defects, and increase reliability.
+
+**Key Portfolio Highlights:**
+- **AI-Powered Testing**: Custom rulesets and automation frameworks
+- **Cloud-Native Applications**: AWS Lambda, Step Functions, and serverless architectures  
+- **Test Automation**: Playwright, Cypress, and comprehensive CI/CD pipelines
+- **Quality Engineering**: Contract testing, accessibility validation, and performance monitoring
+
 ---
 
 ## 🚀 About Me  
