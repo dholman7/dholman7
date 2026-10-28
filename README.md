@@ -1,57 +1,30 @@
-# 👋 Hi, I'm Dan Holman  
+## Dan Holman
 
-**Sr. Software Developer in Test (SDET) | Automation Architect | AWS & Cloud-Native Developer**  
-Python • TypeScript • Java • GraphQL • Playwright  
+Senior SDET moving into AI engineering. I build agents that write and verify tests, and the evaluation harnesses that show whether those agents actually work. 14+ years in test infrastructure, automation frameworks, and developer tooling: Python, TypeScript, AWS, Playwright, and contract testing.
 
-## 🎯 Portfolio & Work Examples
+### Featured
 
-**📁 [View My Complete Portfolio](https://github.com/dholman7/danholman-portfolio)**
+| Project | What it is | Result |
+|---|---|---|
+| [storywright](https://github.com/dholman7/storywright) | LangGraph + Claude agent: turns a user story into Playwright API tests, runs them against the real app, repairs what fails, and never weakens an assertion to pass | 97% of held-out trials (58/60) vs 60% for a single call on the same model, at $0.0028 per trial |
+| [agent-eval-gate](https://github.com/dholman7/agent-eval-gate) | Benchmark runner and CI gate for test-writing agents: 32 tasks, 32 seeded bugs, Wilson confidence intervals, record/replay, a GitHub Action | Fails a PR only when results drop by more than run-to-run noise |
+| [vendor-intake-app](https://github.com/dholman7/vendor-intake-app) | Next.js + FastAPI app used as the system under test: Gherkin specs, tenant isolation, audit trail, generated API types | 68 backend tests, 20 Playwright tests with accessibility scans, CI on every push |
 
-This repository showcases my work in **test automation, AWS cloud development, and AI-powered testing**. Each folder contains code samples and writeups demonstrating skills I use daily to improve developer velocity, reduce defects, and increase reliability.
+### Claims and where to check them
 
-**Key Portfolio Highlights:**
-- **AI-Powered Testing**: Custom rulesets and automation frameworks
-- **Cloud-Native Applications**: AWS Lambda, Step Functions, and serverless architectures  
-- **Test Automation**: Playwright, Cypress, and comprehensive CI/CD pipelines
-- **Quality Engineering**: Contract testing, accessibility validation, and performance monitoring
+| Skill | Evidence |
+|---|---|
+| Agent evaluation | agent-eval-gate: frozen dev/held-out split, seeded bugs validated against reference tests, intervals on every rate |
+| Tool orchestration, failure handling | storywright: bounded write/verify/repair graph, typed failure diagnosis, read-only repo tools, a deterministic guard on every repair |
+| LLM application development | storywright and agent-eval-gate's Claude baseline: structured outputs, prompt caching, model profiles, cost accounting |
+| Test automation | vendor-intake-app: pytest at 97% coverage, Playwright UI and API suites, axe accessibility checks |
+| React and TypeScript | vendor-intake-app frontend (Next.js 16, strict TypeScript, types generated from OpenAPI) |
+| CI/CD | GitHub Actions with secret scanning in all three repos; OpenAPI and type drift checks and Docker builds in vendor-intake-app; a reusable composite action in agent-eval-gate |
 
----
+### In progress
 
-## 🚀 About Me  
-I’m a Senior Software Developer in Test and Cloud-Native Developer with **13+ years of experience** building production-ready applications, automation frameworks, and AWS solutions that accelerate delivery and improve software quality.  
+An MCP server for CI and repo context, a code-review skill with self-healing and re-review, and an observability dashboard for agent runs.
 
-I specialize in bridging the gap between quality engineering and software development — writing production-grade code, architecting automation at scale, and mentoring teams to adopt modern practices.  
+### Contact
 
----
-
-## 💻 Core Strengths  
-
-- **Software Development & Automation**  
-  Python, TypeScript, Java, ReactJS — delivering frameworks, APIs, and internal tools that reduce cycle times and boost developer velocity.  
-
-- **Cloud & DevOps**  
-  AWS (Lambda, CloudFormation, Step Functions, S3, EC2, RDS), GitHub Actions, Jenkins, TeamCity, and Datadog — enabling scalable, observable pipelines.  
-
-- **Quality Leadership**  
-  Architected contract testing (Pact), accessibility testing (Axe), and event-driven architecture validations to prevent breaking changes and ensure compliance.  
-
-- **Cross-Industry Impact**  
-  Delivered solutions across **EdTech, Industrial IoT, and Aerospace/Defense**, always focused on reliability in high-stakes, regulated environments.  
-
----
-
-## 🌟 What I Bring  
-- Architected **cloud-native test frameworks** that reduced manual authoring effort by **70%** using AI-driven rulesets.  
-- Embedded testing into CI/CD pipelines, driving measurable reductions in production defects and improving system reliability.  
-- Passionate about leveraging **automation, cloud-native architectures, and modern development practices** to deliver scalable, resilient, and customer-focused software.  
-
----
-
-## 🔧 Tech & Tools  
-Python • TypeScript • Java • GraphQL • ReactJS • AWS • GitHub Actions • Jenkins • TeamCity • Pact • Playwright • Cypress • Selenium • Appium • Datadog • Docker • SQL • Postman  
-
----
-
-## 📫 Connect With Me  
-- 💼 [LinkedIn](https://linkedin.com/in/danxholman)  
-- 📧 [danxholman@gmail.com](mailto:danxholman@gmail.com)  
+[LinkedIn](https://linkedin.com/in/danxholman) · danxholman@gmail.com
