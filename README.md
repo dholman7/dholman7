@@ -1,8 +1,18 @@
 ## Dan Holman
 
-Senior SDET moving into AI engineering. I build agents that write and verify tests, and the evaluation harnesses that show whether those agents actually work. 14+ years in test infrastructure, automation frameworks, and developer tooling: Python, TypeScript, AWS, Playwright, and contract testing.
+Senior SDET moving into AI engineering. I build agents that write and verify tests, and the evaluation harnesses that show whether those agents actually work.
 
-**Portfolio: [dholman7.github.io](https://dholman7.github.io/)**, a visual guide to how these projects fit together and how to run each one.
+### [See the portfolio: dholman7.github.io](https://dholman7.github.io/)
+
+A visual guide to the six projects below: what each one does, how they fit together, and how to run each one.
+
+### About me
+
+I've spent 14+ years making software trustworthy: test infrastructure, automation frameworks, and the developer tooling around them. Most recently, as a senior SDET, I ran Pact contract-testing infrastructure on AWS with can-i-deploy release gating and smoke-test auto-rollback, published shared Python and TypeScript verification packages and composite GitHub Actions used across teams, built a serverless synthetic test-data factory on Lambda and Step Functions, and built internal tools with React front-ends for product and engineering teams. Before that, I built Selenium, Appium, and Python API test frameworks for AWS cloud and mobile products, and test frameworks for aerospace and defense quality-management software.
+
+Lately my focus is AI in the software lifecycle: agents that generate tests, skills that encode a team's standards, and the verification that decides whether AI output can be trusted. The projects here are independent work that shows those ideas end to end, in public, so anyone can run them and check the results.
+
+**Python · TypeScript · Playwright · AWS · Contract testing · Claude Code · MCP · LangGraph**
 
 ### Featured
 
