@@ -1,10 +1,10 @@
 ## Dan Holman
 
-Senior SDET moving into AI engineering. I build agents that write and verify tests, and the evaluation harnesses that show whether those agents actually work.
+SDET who builds and evaluates AI coding agents. I build agents that write and verify tests, and the evaluation harnesses that show whether those agents actually work.
 
 ### [See the portfolio: dholman7.github.io](https://dholman7.github.io/)
 
-A visual guide to the six projects below: what each one does, how they fit together, and how to run each one.
+A visual guide to the six projects below: what each one does, how they fit together, and how to run each one. Every number here and there is recomputed from the repos by a CI check, and [How this was built](https://dholman7.github.io/built.html) covers working with Claude Code as the implementer.
 
 ### About me
 
@@ -18,12 +18,12 @@ Lately my focus is AI in the software lifecycle: agents that generate tests, ski
 
 | Project | What it is | Result |
 |---|---|---|
-| [storywright](https://github.com/dholman7/storywright) | LangGraph + Claude agent: turns a Jira story into Playwright API tests, runs them against the real app, repairs what fails without weakening an assertion, opens the PR, and closes the issue on merge | 97% of held-out trials (58/60) vs 60% for a single call on the same model, at $0.0028 per trial |
-| [agent-eval-gate](https://github.com/dholman7/agent-eval-gate) | Benchmark runner and CI gate for test-writing agents: 32 tasks, 32 seeded bugs, Wilson confidence intervals, record/replay, a GitHub Action | Fails a PR only when results drop by more than run-to-run noise |
-| [agent-dev-skills](https://github.com/dholman7/agent-dev-skills) | Claude Code plugin with review-loop: PR review that checks every citation and re-derives each finding before commenting, then re-reviews new commits | On Opus 5.5, catches 29 of 32 seeded bugs with 0 false alarms in 24 harmless changes, 14 of them built to look risky |
+| [storywright](https://github.com/dholman7/storywright) | LangGraph + Claude agent: turns a Jira story into Playwright API or UI tests, runs them against the real app, repairs what fails (a guard rejects repairs that drop the test or cut assertions), opens the PR, and closes the issue on merge | <!--claim:sw.v2.rate-->100%<!--/claim--> of held-out trials (<!--claim:sw.v2.frac-->60/60<!--/claim-->) vs <!--claim:sc.v2.rate-->53%<!--/claim--> for a single call on the same model, at <!--claim:sw.v2.cost-->$0.0028<!--/claim--> per trial (held-out not blind; see the repo) |
+| [agent-eval-gate](https://github.com/dholman7/agent-eval-gate) | Benchmark runner and CI gate for test-writing agents: <!--claim:bench.tasks-->42<!--/claim--> tasks, <!--claim:bench.bugs-->42<!--/claim--> seeded bugs, Wilson confidence intervals, record/replay, a GitHub Action | Fails a PR when a result's interval falls entirely below the baseline's |
+| [agent-dev-skills](https://github.com/dholman7/agent-dev-skills) | Claude Code plugin with review-loop: PR review that checks every citation and re-derives each finding before commenting, then re-reviews new commits | On Opus 5.5, comments on <!--claim:rl.opus.caught-->29<!--/claim--> of <!--claim:rl.bugs-->32<!--/claim--> seeded bugs with <!--claim:rl.false_alarms-->0<!--/claim--> false alarms in <!--claim:rl.clean_total-->24<!--/claim--> harmless changes, <!--claim:rl.clean_hard-->14<!--/claim--> of them built to look risky |
 | [ci-context-mcp](https://github.com/dholman7/ci-context-mcp) | Read-only MCP server that gives Claude Code, Cursor, or any MCP client CI runs, failure summaries, logs, coverage, and PR checks from GitHub Actions | GET-only client, repo allowlist, and the token never leaves GitHub; tested through the MCP SDK's in-process client |
-| [agent-telemetry](https://github.com/dholman7/agent-telemetry) | Static Next.js dashboard over every agent-eval-gate run: success and bug-detection intervals per split, a task × trial grid, and an OpenTelemetry trace and agent log for each trial | [Live site](https://dholman7.github.io/agent-telemetry/), 12 runs, rebuilt weekly from published results |
-| [vendor-intake-app](https://github.com/dholman7/vendor-intake-app) | Next.js + FastAPI app used as the system under test: Gherkin specs, tenant isolation, audit trail, generated API types | 68 backend tests, 27 Playwright tests with accessibility scans (7 written by Storywright from Jira stories), CI on every push |
+| [agent-telemetry](https://github.com/dholman7/agent-telemetry) | Static Next.js dashboard over every agent-eval-gate run: success and bug-detection intervals per split, a task × trial grid, and an OpenTelemetry trace and agent log for each trial | [Live site](https://dholman7.github.io/agent-telemetry/), <!--claim:tel.runs-->17<!--/claim--> runs, rebuilt weekly from published results |
+| [vendor-intake-app](https://github.com/dholman7/vendor-intake-app) | Next.js + FastAPI app used as the system under test: Gherkin specs, tenant isolation, audit trail, generated API types | <!--claim:vi.backend_tests-->68<!--/claim--> backend tests, <!--claim:vi.playwright_tests-->30<!--/claim--> Playwright tests with accessibility scans (<!--claim:vi.generated_tests-->7<!--/claim--> written by Storywright from Jira stories), CI on every push |
 
 ### Claims and where to check them
 
@@ -32,10 +32,11 @@ Lately my focus is AI in the software lifecycle: agents that generate tests, ski
 | Agent evaluation | agent-eval-gate: frozen dev/held-out split, seeded bugs validated against reference tests, intervals on every rate |
 | Tool orchestration, failure handling | storywright: bounded write/verify/repair graph, typed failure diagnosis, read-only repo tools, a deterministic guard on every repair |
 | Claude Code skills and plugins | agent-dev-skills: a validated plugin and marketplace manifest, a skill that asks before posting, and the same pipeline as a CLI and GitHub Action |
-| MCP | ci-context-mcp: six read-only tools on the MCP Python SDK 2.x, with a security model covering allowlisting, credential handling, and untrusted log text |
+| MCP | ci-context-mcp: <!--claim:mcp.tools-->six<!--/claim--> read-only tools on the MCP Python SDK 2.x, with a security model covering allowlisting, credential handling, and untrusted log text |
 | Observability | agent-telemetry: an OpenTelemetry trace per trial with GenAI token attributes, drawn as waterfalls beside the harness verdict and agent log |
 | LLM application development | storywright and agent-eval-gate's Claude baseline: structured outputs, prompt caching, model profiles, cost accounting |
-| Test automation | vendor-intake-app: pytest at 97% coverage, Playwright UI and API suites, axe accessibility checks |
+| Claims that stay true | [dholman7.github.io](https://github.com/dholman7/dholman7.github.io/blob/main/claims/check.py): a CI check recomputes every number on the portfolio page and this README from the repos and fails on drift |
+| Test automation | vendor-intake-app: pytest at <!--claim:vi.coverage-->97%<!--/claim--> coverage, Playwright UI and API suites, axe accessibility checks |
 | React and TypeScript | vendor-intake-app frontend (Next.js 16, strict TypeScript, types generated from OpenAPI); agent-telemetry (React 19, static export, charts built without a chart library) |
 | CI/CD | GitHub Actions with secret scanning in every project repo; OpenAPI and type drift checks and Docker builds in vendor-intake-app; a reusable composite action in agent-eval-gate |
 
